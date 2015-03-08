@@ -1,0 +1,155 @@
+@import "fonts/stylesheet.css";
+
+html,body,p,div { overflow:hidden; font-family:walkway_semiboldregular; }
+h1,h2,h3,h4,h5,h6 {font-family:archisticobold;} 
+h1.main { font-size:4em; margin:0; }
+.spacer { height:1em;}
+h1 { font-size:3em;}
+
+.pure-button {font-size:1.2em;}
+.fa.fa-spinner.fa-pulse{font-size:5em!important;}
+.btn-green,
+.btn-red,
+.btn-orange,
+.btn-teal,
+.answer {
+	font-family:walkway_semiboldregular;
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	margin:0.5em;
+}
+
+.btn-red, .answer:nth-child(n) {
+	background: rgb(202, 60, 60); /* this is a maroon */
+}
+.btn-orange, .answer:nth-child(2n) {
+	background: rgb(223, 117, 20); /* this is an orange */
+}
+.btn-green, .answer:nth-child(3n) {
+	background: rgb(28, 184, 65); /* this is a green */
+}
+.btn-teal, .answer:nth-child(4n) {
+	background: rgb(66, 184, 221); /* this is a light blue */
+}
+		
+#thispage,#nextpage {
+	-moz-animation-duration: 3s;
+	border:2px solid silver;
+}
+.background {
+  position:fixed;
+  top:0;left:0;width:100%;height:100%;
+  background-color: #FFFFFF;
+  background-image: url(images/radial_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#EEEEEE), to(#FFFFFF));
+  background: -webkit-radial-gradient(circle, #EEEEEE, #FFFFFF);
+  background: -moz-radial-gradient(circle, #EEEEEE, #FFFFFF);
+  background: -ms-radial-gradient(circle, #EEEEEE, #FFFFFF);
+}
+.cover {
+  cursor:pointer;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border:1em solid gray;
+  text-align:center;
+  padding:1em;
+}
+
+.rainbow {
+	text-align:center;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 30s infinite linear;
+	margin:0;
+}
+.intro { color:black; font-size:1.3em; margin:0;}
+.navigation { margin-top:2em;}
+.navigation .pure-button:nth-child(1){ float:left; }
+.navigation .pure-button:nth-child(2){ float:right; }
+.pure-button .fa { margin:0 0.5em; }
+.fa-star { margin:0 !important;}
+
+/* About */
+.speech{
+	position: relative;
+	text-align: center;
+	background-color: #fff;
+	border: 4px solid #666;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+	margin:1em;
+	padding:0.5em;
+	overflow:visible;
+	font-size:1.1em;
+}
+.speech:before{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 37px;
+	border: 10px solid;
+	
+}
+.speech:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: 37px;
+	border: 5px solid;
+	
+}
+.left { background:#ffdddd; margin-right:2em; text-align:left; padding-left:2em;}
+.left.speech:after  {left: 19px;border-color: #ffdddd transparent transparent #ffdddd;}
+.left.speech:before{left: 15px;border-color: #666 transparent transparent #666;}
+.right { background:#ddddff; margin-left:2em; text-align:right; padding-right:2em;}
+.right.speech:after {right: 19px;border-color:#ddddff #ddddff transparent  transparent;}
+.right.speech:before{right: 15px;border-color:#666 #666 transparent  transparent;}
+.about-container { height:20em; overflow:auto;}
+/* Variant : right
+------------------------------------------ */
+
+/* creates the larger triangle */
+.triangle-border.right:before {
+  top:10px; /* controls vertical position */
+  bottom:auto;
+  left:auto;
+  right:-30px; /* value = - border-left-width - border-right-width */
+  border-width:15px 0 15px 30px;
+  border-color:transparent #5a8f00;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.right:after {
+  top:16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+  bottom:auto;
+  left:auto;
+  right:-21px; /* value = - border-left-width - border-right-width */
+  border-width:9px 0 9px 21px;
+  border-color:transparent #fff;
+}
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
